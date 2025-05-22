@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Platform</title>
+    <title>betube | Home</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-left">
+    <nav class="main-nav">
+        <div class="nav-brand">
             <h1>betube</h1>
-            <button id="homeBtn">Inicio</button>
-            <button id="uploadBtn">Subir Video</button>
         </div>
-        <div class="nav-right">
+        
+        <div class="nav-controls">
+            <button id="homeBtn" class="nav-btn active">
+                <img src="assets/icons/home.svg" alt="Inicio">
+                Inicio
+            </button>
+            <button id="uploadBtn" class="nav-btn">
+                <img src="assets/icons/upload.svg" alt="Subir">
+                Subir
+            </button>
+        </div>
+        
+        <div class="user-panel">
             <span id="usernameDisplay"></span>
-            <button id="logoutBtn">Cerrar Sesión</button>
+            <button id="logoutBtn" class="nav-btn">
+                <img src="assets/icons/logout.svg" alt="Cerrar sesión">
+                Salir
+            </button>
         </div>
     </nav>
 
-    <div class="container">
-        <!-- Formulario para subir videos (oculto por defecto) -->
-        <form id="videoForm" class="hidden">
-            <h2>Subir nuevo video</h2>
-            <input type="text" id="videoTitle" placeholder="Título" required>
-            <input type="url" id="videoUrl" placeholder="URL de YouTube" required>
-            <textarea id="videoDescription" placeholder="Descripción"></textarea>
-            <button type="submit">Publicar</button>
-        </form>
+    <main class="main-content">
+        <!-- Contenido dinámico -->
+    </main>
 
-        <!-- Sección de videos -->
-        <div id="videosContainer" class="videos-grid"></div>
-    </div>
-
-    <script src="app.js"></script>
+    <div class="notification-container" id="notifications"></div>
 </body>
 </html>
